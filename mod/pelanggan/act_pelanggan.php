@@ -33,11 +33,11 @@
 		$nomor_telp= anti_inject($_POST['nomor_telp']);
 		$alamat= anti_inject($_POST['alamat']);
 
-		mysql_query("INSERT INTO tb_pelanggan('kode_pelanggan', 
+		mysql_query("INSERT INTO tb_pelanggan(kode_pelanggan, 
 										nama_pelanggan, 
 										nomor_telp, 
 										alamat)
-									VALUES ($kode_pelanggan, 
+									VALUES ('$kode_pelanggan', 
 										'$nama_pelanggan', 
 										'$nomor_telp', 
 										'$alamat')") or die(mysql_error());
